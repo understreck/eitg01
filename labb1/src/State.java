@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Random;
 
 class State extends GlobalSimulation{
 	
@@ -37,15 +37,15 @@ class State extends GlobalSimulation{
 	
 	private void arrival(){
 		if (numberInQueue == 0)
-			InsertEvent(READY, time + generateMean(1));
+			InsertEvent(READY, time + /*generateMean*/(1));
 		numberInQueue++;
-		InsertEvent(ARRIVAL, time + generateMean(2));
+		InsertEvent(ARRIVAL, time + /*generateMean*/(1.0 / 0.98));
 	}
 	
 	private void ready(){
 		numberInQueue--;
 		if (numberInQueue > 0)
-			InsertEvent(READY, time + generateMean(1));
+			InsertEvent(READY, time + /*generateMean*/(1));
 	}
 	
 	private void measure(){
