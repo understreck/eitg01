@@ -87,7 +87,7 @@ class State extends GlobalSimulation {
     private void add_ARRIVAL_B(String why) {
         final var lambda = 1.0;
 
-        var delay = 1.0 / lambda;
+        var delay = generateMean(1.0 / lambda);
         if (debug) {
             System.out.println("Adding an ARRIVAL_B event " + delay + "s from now because:\n" + why);
         }

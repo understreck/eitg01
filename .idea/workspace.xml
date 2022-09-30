@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="43fd2529-3381-4a5c-ad24-2c90e4892565" name="Changes" comment="Uppgift 1 klar">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labb1/src/GlobalSimulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/labb1/src/GlobalSimulation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labb1/src/MainSimulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/labb1/src/MainSimulation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labb1/src/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/labb1/src/State.java" afterDir="false" />
-    </list>
+    <list default="true" id="43fd2529-3381-4a5c-ad24-2c90e4892565" name="Changes" comment="Exercise 2c" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,7 +61,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664529515168</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Exercise 2a and b">
+      <created>1664538148559</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1664538148559</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -82,6 +84,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Uppgift 1 klar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Uppgift 1 klar" />
+    <MESSAGE value="Exercise 2a and b" />
+    <option name="LAST_COMMIT_MESSAGE" value="Exercise 2a and b" />
   </component>
 </project>
