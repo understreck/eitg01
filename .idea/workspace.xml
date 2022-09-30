@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="43fd2529-3381-4a5c-ad24-2c90e4892565" name="Changes" comment="">
+    <list default="true" id="43fd2529-3381-4a5c-ad24-2c90e4892565" name="Changes" comment="Uppgift 1 klar">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labb1/src/GlobalSimulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/labb1/src/GlobalSimulation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labb1/src/MainSimulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/labb1/src/MainSimulation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/labb1/src/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/labb1/src/State.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -15,6 +17,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2FR6JNs4fMxTXXo4UiY3ICOMwct" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -54,6 +59,14 @@
       <option name="presentableId" value="Default" />
       <updated>1664442481602</updated>
     </task>
+    <task id="LOCAL-00001" summary="Uppgift 1 klar">
+      <created>1664529515168</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1664529515168</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -66,5 +79,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Uppgift 1 klar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Uppgift 1 klar" />
   </component>
 </project>

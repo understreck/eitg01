@@ -1,15 +1,12 @@
-import java.io.*;
-
-
 public class MainSimulation extends GlobalSimulation{
  
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
     	Event actEvent;
     	EventList myEventList = new EventList();
     	State actState = new State(myEventList);
-        myEventList.InsertEvent(ARRIVAL, 0);
-        myEventList.InsertEvent(MEASURE, 5);
-    	while (time < 50000){
+        myEventList.InsertEvent(ARRIVAL_A, 0);
+        myEventList.InsertEvent(MEASURE, 0.1);
+    	while (time < 100){
     		actEvent = myEventList.FetchEvent();
     		time = actEvent.eventTime;
     		actState.TreatEvent(actEvent);
