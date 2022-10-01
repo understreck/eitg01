@@ -2,11 +2,9 @@
 // man skriva ytterligare variante av SendSignal som innehåller fler parametrar.
 
 public class SignalList{
-    public static Signal list, last;
+    public static Signal list = new Signal(), last = new Signal();
 
-    SignalList(){
-        list = new Signal();
-        last = new Signal();
+    static {
         list.next = last;
     }
 
