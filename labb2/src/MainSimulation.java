@@ -12,24 +12,29 @@ public class MainSimulation extends Global {
 
         //Här nedan skapas de processinstanser som behövs och parametrar i dem ges värden.
 
-        var q3 = new QS();
-        q3.sendTo = null;
-        var q2 = new QS();
-        q2.sendTo = q3;
-        var q1 = new QS();
-        q1.sendTo = q2;
 
-        Gen Generator = new Gen();
-        Generator.lambda = 9; //Generator ska generera nio kunder per sekund
-        Generator.sendTo = q1; //De genererade kunderna ska skickas till kösystemet QS
+        var dispatchers = new Dispatcher[]{new Dispatcher(
+                new QS[]{new QS(), new QS(), new QS(), new QS(), new QS()},
+                Dispatcher.Strategy.RANDOM),
+                new Dispatcher(
+                        new QS[]{new QS(), new QS(), new QS(), new QS(), new QS()},
+                        Dispatcher.Strategy.SEQUENTIAL),
+                new Dispatcher(
+                        new QS[]{new QS(), new QS(), new QS(), new QS(), new QS()},
+                        Dispatcher.Strategy.LEAST_WORK)};
+
+        var gens = new Gen[dispatchers.length];
+        for(int i = 0; i < dispatchers.length; ++i) {
+            gens[i] = new Gen();
+            gens[i].lambda = 45; //Generator ska generera nio kunder per sekund
+            gens[i].sendTo = dispatchers[i]; //De genererade kunderna ska skickas till kösystemet QS
+        }
 
         //Här nedan skickas de första signalerna för att simuleringen ska komma igång.
 
-        SignalList.SendSignal(READY, Generator, time);
-        SignalList.SendSignal(MEASURE, q1, time);
-        SignalList.SendSignal(MEASURE, q2, time);
-        SignalList.SendSignal(MEASURE, q3, time);
-
+        for(var g : gens) {
+            SignalList.SendSignal(READY, g, time);
+        }
 
         // Detta är simuleringsloopen:
 
@@ -39,11 +44,8 @@ public class MainSimulation extends Global {
             actSignal.destination.TreatSignal(actSignal);
         }
 
-        //Slutligen skrivs resultatet av simuleringen ut nedan:
-
-        System.out.println("Medelantal kunder i kösystem 1: " + 1.0 * q1.accumulated / q1.noMeasurements);
-        System.out.println("Medelantal kunder i kösystem 2: " + 1.0 * q2.accumulated / q2.noMeasurements);
-        System.out.println("Medelantal kunder i kösystem 3: " + 1.0 * q3.accumulated / q3.noMeasurements);
-
+        for(var d : dispatchers) {
+            d.print_diags();
+        }
     }
 }
